@@ -185,9 +185,10 @@ var CustomView = View.extend({
 			  		position : new google.maps.LatLng(locations[i][1], locations[i][2]),
 			  		map : map
 			  	});
-			
+
 			  	google.maps.event.addListener(marker, 'click', (function(marker, i) {
 			  		return function() {
+			  		    console.log('content_string=' + locations[i][0])
 			  			infowindow.setContent(locations[i][0]);
 			  			infowindow.open(map, marker);
 			  		}
