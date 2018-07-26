@@ -127,4 +127,5 @@ class ResPartner(models.Model):
         gm_c_lng = float(IC.get_param('Google_Maps_Center_Longitude'))
         gm_zoom = int(IC.get_param('Google_Maps_Zoom'))
 
+        _logger.debug("ABK: Locations=%d" % len(locations))
         return locations, (gm_c_lat, gm_c_lng, gm_zoom)
